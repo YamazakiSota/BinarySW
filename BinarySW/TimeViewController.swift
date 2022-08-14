@@ -30,13 +30,10 @@ class TimeViewController: UIViewController {
     
     @IBAction func startButton(_ sender: Any) {
         
-        
         start.isEnabled = false
         start.isHidden = true
         pause.isEnabled = true
         pause.isHidden = false
-        
-        
         
         if(selectLevel == 1){
             OurTImer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(Action), userInfo: nil, repeats: true)
@@ -54,10 +51,7 @@ class TimeViewController: UIViewController {
         OurTImer.invalidate()
         
         reset.isEnabled = true
-        
         pause.isEnabled = false
-        
-        
         
         if(String(Int(TextNum), radix: 2) == String(goalNum, radix: 2)){
             dif.text = "Perfect!!"
@@ -70,7 +64,6 @@ class TimeViewController: UIViewController {
             AudioServicesPlaySystemSound(1011)
             
             i = Int(TextNum) - goalNum
-            
             if(i < 0){
                 dif.text = String(i, radix: 2)
                 dif.textColor = UIColor.blue
