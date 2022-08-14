@@ -1,0 +1,10 @@
+version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
+options: "944f44c543193cddf9cc0abd3322fc7f17b4e57a65d25d6eefaf8429c753d964"
+build_start_time: [1656551195, 997003078]
+build_end_time: [1656551208, 208349943]
+inputs:
+  "/Users/yamazakisota/BinarySW/BinarySW/AppDelegate.swift": [1652361772, 100705146]
+  "/Users/yamazakisota/BinarySW/BinarySW/CustomLabel.swift": [1652460798, 913482427]
+  "/Users/yamazakisota/BinarySW/BinarySW/SceneDelegate.swift": [1652347969, 225153923]
+  "/Users/yamazakisota/BinarySW/BinarySW/TimeViewController.swift": [1652594146, 445527553]
+  "/Users/yamazakisota/BinarySW/BinarySW/ViewController.swift": [1656393376, 35986423]

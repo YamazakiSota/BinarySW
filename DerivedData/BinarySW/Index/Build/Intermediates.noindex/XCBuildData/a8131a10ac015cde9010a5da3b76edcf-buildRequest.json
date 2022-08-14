@@ -1,0 +1,59 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "f0a8e341039131b95ac2471b41fb42c39f6ab3803a42edda5dcb7a0b72310ff5"
+    }
+  ],
+  "containerPath" : "/Users/yamazakisota/BinarySW/BinarySW.xcworkspace",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator15.4",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/yamazakisota/BinarySW/DerivedData/BinarySW/Index/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/yamazakisota/BinarySW/DerivedData/BinarySW/Index/Build/Products",
+      "derivedDataPath" : "/Users/yamazakisota/BinarySW/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/yamazakisota/BinarySW/DerivedData/BinarySW/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/yamazakisota/BinarySW/DerivedData/BinarySW/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/yamazakisota/BinarySW/DerivedData/BinarySW/Index/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "INDEX_ARENA_INFO_REGULAR_BUILD_PRODUCTS_DIR" : "/Users/yamazakisota/BinarySW/DerivedData/BinarySW/Build/Products",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
