@@ -12,14 +12,14 @@ import GoogleMobileAds
 var vibrationCount = 5
 
 class TimeViewController: UIViewController {
-        
+    
     @IBOutlet weak var label: UILabel!
     @IBOutlet var goal: UILabel!
     @IBOutlet var dif: UILabel!
     @IBOutlet weak var start: UIButton!
     @IBOutlet weak var pause: UIButton!
     @IBOutlet weak var reset: UIButton!
-        
+    
     var bannerView: GADBannerView!
     var OurTImer = Timer()
     var TimerDisplayed = 0.0
@@ -27,7 +27,7 @@ class TimeViewController: UIViewController {
     var goalNum = 0
     var selectLevel = 0
     var i = 0
-
+    
     @IBAction func startButton(_ sender: Any) {
         
         
@@ -35,7 +35,7 @@ class TimeViewController: UIViewController {
         start.isHidden = true
         pause.isEnabled = true
         pause.isHidden = false
-            
+        
         
         
         if(selectLevel == 1){
@@ -47,7 +47,7 @@ class TimeViewController: UIViewController {
             goalNum = Int.random(in: 30..<50)
             goal.text = "\(goalNum)"
         }
-            
+        
     }
     
     @IBAction func pauseButton(_ sender: Any) {
@@ -81,7 +81,7 @@ class TimeViewController: UIViewController {
             
             dif.isHidden = false
         }
-            
+        
         if(selectLevel == 2){
             goal.text = "\(goalNum) : " + String(goalNum, radix: 2)
         }
@@ -90,28 +90,28 @@ class TimeViewController: UIViewController {
     
     func startVibrateInterval() {
         
-            // どのバイブレーションを鳴らすか
-            let systemSoundID = SystemSoundID(kSystemSoundID_Vibrate)
-            
-            // 繰り返し用のコールバックをセット
+        // どのバイブレーションを鳴らすか
+        let systemSoundID = SystemSoundID(kSystemSoundID_Vibrate)
+        
+        // 繰り返し用のコールバックをセット
         AudioServicesAddSystemSoundCompletion(systemSoundID, nil, nil, {(systemSoundID, nil) -> Void in
             vibrationCount =  vibrationCount - 1
-                
-                if ( vibrationCount > 0 ) {
-                    // 繰り返し再生
-                    AudioServicesPlaySystemSound(systemSoundID)
-                }
-                else {
-                    // コールバックを解除
-                    AudioServicesRemoveSystemSoundCompletion(systemSoundID)
-                }
-                
-            }, nil)
             
-            // 初回のバイブレーションを鳴らす
-            AudioServicesPlaySystemSound(systemSoundID)
+            if ( vibrationCount > 0 ) {
+                // 繰り返し再生
+                AudioServicesPlaySystemSound(systemSoundID)
+            }
+            else {
+                // コールバックを解除
+                AudioServicesRemoveSystemSoundCompletion(systemSoundID)
+            }
             
-        }
+        }, nil)
+        
+        // 初回のバイブレーションを鳴らす
+        AudioServicesPlaySystemSound(systemSoundID)
+        
+    }
     
     
     @IBAction func resetButton(_ sender: Any) {
@@ -132,17 +132,17 @@ class TimeViewController: UIViewController {
         
         vibrationCount = 5
     }
-        
+    
     @objc func Action() {
         TimerDisplayed += 0.1
         TextNum = TimerDisplayed * 10
-            
+        
         //label.text = String(format: "%03d", Int(TextNum))
-            
+        
         let str2  = String(Int(TextNum), radix: 2)
         label.text = str2
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -159,7 +159,7 @@ class TimeViewController: UIViewController {
         
         
     }
-        
+    
     
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
@@ -173,13 +173,13 @@ class TimeViewController: UIViewController {
                                 attribute: .bottom,
                                 multiplier: 1,
                                 constant: 0) ,
-            NSLayoutConstraint(item: bannerView,
-                               attribute: .centerX,
-                               relatedBy: .equal,
-                               toItem: view,
-                               attribute: .centerX,
-                               multiplier: 1,
-                               constant: 0)
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
             ])
     }
     
